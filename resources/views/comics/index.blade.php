@@ -29,6 +29,6 @@
        </tbody>
      </table>
 
-     <a href="{{ route('pastas.create') }}" class="btn btn-success">Crea una nuova pasta</a>
+     <a href="{{ route('comics.create') }}" class="btn btn-success">Crea un nuovo comic</a>
 </div>
 @endsection
