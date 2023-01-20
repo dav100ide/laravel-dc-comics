@@ -4,11 +4,12 @@
 <div class="container">
    <h1>comics</h1>
 
-   <table class="table">
+   <table class="table table-striped">
        <thead>
          <tr>
            <th scope="col">Titolo</th>
            <th scope="col">Tipo</th>
+           <th scope="col">series</th>
            <th scope="col">copertina</th>
            <th scope="col">prezzo</th>
            <th scope="col">Azioni</th>
@@ -19,6 +20,7 @@
            <tr>
                <td>{{ $comic->title }}</td>
                <td>{{ $comic->type }}</td>
+               <td>{{ $comic->series }}</td>
                <td>
                   <img src="{{$comic->thumb}}" class="img-fluid">   
                </td>
