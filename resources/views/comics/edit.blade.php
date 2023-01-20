@@ -18,8 +18,8 @@
             <div class="mb-3">
                 <label for="type" class="form-label">Tipo*</label>
                 <select class="form-select" id="type" name="type">
-                    <option value="comic-book" {{ $comic->type === 'comic book'? 'selected': null }}>comic book</option>
-                    <option value="graphic-novel" {{ $comic->type === 'graphic novel'? 'selected': null }}>graphic novel</option>
+                    <option value="comic book" {{ $comic->type === 'comic book'? 'selected': null }}>comic book</option>
+                    <option value="graphic novel" {{ $comic->type === 'graphic novel'? 'selected': null }}>graphic novel</option>
                 </select>
             </div>
             

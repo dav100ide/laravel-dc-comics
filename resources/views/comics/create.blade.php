@@ -17,8 +17,8 @@
             <div class="mb-3">
                 <label for="type" class="form-label">Tipo*</label>
                 <select class="form-select" id="type" name="type">
-                    <option value="comic-book">comic book</option>
-                    <option value="graphic-novel">graphic novel</option>
+                    <option value="comic book">comic book</option>
+                    <option value="graphic novel">graphic novel</option>
                 </select>
             </div>
             
