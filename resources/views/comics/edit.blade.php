@@ -37,6 +37,10 @@
                   {!! $comic->description !!}
                 </textarea>
             </div>
+            <div class="mb-3">
+                <label for="thumb" class="form-label">copertina</label>
+                <input type="text" class="form-control" id="thumb" name="thumb"  value="{{ $comic->thumb }}" required>
+            </div>
 
             <button type="submit" class="btn btn-primary">Salva</button>
             <button type="reset" class="btn btn-secondary">Reset</button>
