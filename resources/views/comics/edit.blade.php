@@ -3,17 +3,25 @@
 @section('page-content')
     <div class="container">
         <h1>MODIFICA {{$comic->title}}</h1>
-
+        @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>    
+                @endforeach
+            </ul>
+        </div>
+        @endif
         <form action="{{ route('comics.update', $comic) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo*</label>
-                <input type="text" class="form-control" id="title" name="title" maxlength="50" value="{{ $comic->title}}" required>
+                <input type="text" class="form-control" id="title" name="title" maxlength="50" value="{{ $comic->title}}" >
             </div>
             <div class="mb-3">
                <label for="series" class="form-label">Series*</label>
-               <input type="text" class="form-control" id="series" name="series" maxlength="50" value="{{$comic->series}}" required>
+               <input type="text" class="form-control" id="series" name="series" maxlength="50" value="{{$comic->series}}" >
            </div>
             <div class="mb-3">
                 <label for="type" class="form-label">Tipo*</label>
