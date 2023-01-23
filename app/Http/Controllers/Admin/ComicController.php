@@ -38,16 +38,6 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        // //prendo tutti i dati
-        // $data = $request->all();
-        // //creo l'oggetto model
-        // $new_comic = new Comic();
-        // //mass fill
-        // $new_comic->fill($data);
-
-        // $new_comic->save();
-        // return redirect()->route('comics.show', $new_comic->id);
-
         $request->validate([
             'title' => 'required|string|min:5|max:50',
             'thumb' => 'nullable|url',
@@ -58,7 +48,16 @@ class ComicController extends Controller
             'sale_date' => 'date'
         ]);
 
+
+        // //prendo tutti i dati
         $data = $request->all();
+        // //creo l'oggetto model
+        $new_comic = new Comic();
+        // //mass fill
+        $new_comic->fill($data);
+
+        $new_comic->save();
+        return redirect()->route('comics.show', $new_comic->id);
     }
 
     /**
@@ -92,12 +91,6 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        // recupero tutti i dati
-        // $data = $request->all();
-
-        // $comic->update($data);
-
-        // return redirect()->route('comics.show', $comic->id);
         $request->validate([
             'title' => 'required|string|min:5|max:50',
             'thumb' => 'nullable|url',
@@ -107,8 +100,12 @@ class ComicController extends Controller
             'description' => 'nullable|string',
             'sale_date' => 'date'
         ]);
-
+        // recupero tutti i dati
         $data = $request->all();
+
+        $comic->update($data);
+
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**

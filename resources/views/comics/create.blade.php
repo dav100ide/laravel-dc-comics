@@ -32,7 +32,7 @@
             
             <div class="mb-3">
                 <label for="price" class="form-label">Prezzo*</label>
-                <input type="number" class="form-control" id="price" name="price" max="500" required>
+                <input type="number" class="form-control" id="price" name="price" step="0.01" max="500" required>
             </div>
             <div class="mb-3">
                <label for="sale_date" class="form-label">sale date*</label>
